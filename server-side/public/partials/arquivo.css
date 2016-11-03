@@ -1,0 +1,27 @@
+.arquivos {  
+    float: left;
+    max-width: 150px;
+    max-height: 140px;
+    margin: 20px;
+    background: navy;
+    text-align: center;
+}
+.nome{
+    color: white;  
+    bottom: 0;
+    background: mediumblue;
+    margin-bottom: 1px; 
+}
+
+.thumbnail {
+ min-width: 100px;
+     min-height: 100px;
+     max-height: 100px;
+    background: white;
+}
+.thumbnail > img{
+     max-width: 100px;
+     max-height: 100px;
+    min-width: 100px;
+     min-height: 100px;
+}

@@ -1,0 +1,20 @@
+<div>
+Quantidade de Arquivos = {{quantidade}} {{token}}
+    
+</div>
+
+
+<div  ng-repeat='file in files'>
+    <div class="arquivos">
+        <a href={{file.webContentLink}}>
+            <div class="thumbnail">
+                <img ng-if="file.thumbnailLink ? file.thumbnailLink : file.thumbnailLink = img " id="im" src={{file.thumbnailLink}}>
+
+            </div>
+        </a>
+        <div class="nome">{{file.title}}</div>
+    </div>
+</div>  
+
+
+<link rel="stylesheet"href="partials/arquivo.css">

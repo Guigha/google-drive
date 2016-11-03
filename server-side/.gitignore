@@ -1,0 +1,7 @@
+# pastas
+/app/models/token.js
+/config/perm.pem
+/config/oauth.js
+/public/vendor/
+/public/img/
+/node_modules/

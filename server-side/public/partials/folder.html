@@ -1,0 +1,59 @@
+
+<img id="mySpinner" src="/img/spinner.gif" ng-show="loading"/>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- -------------------------Upload de Pasta----------------------------------------- -->
+<legend>Criar Pasta no Google-Drive</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="folder.name">Nome da Pasta</label>  
+  <div class="col-md-4">
+  <input id="folder.name" ng-model="folder.name" type="text" placeholder="Nome" class="form-control input-md" required>
+  <span class="help-block">Nome da pasta que vai ser criada</span>  
+  </div> 
+      <button type="submit" ng-click="update(folder)"  class="btn btn-success">Criar Pasta</button>
+</div>
+
+</fieldset>
+</form>
+
+
+<form class="form-horizontal">
+
+    
+    
+<fieldset>
+
+<!------------------------------ Upload de Arquivo --------------------------------------- -->
+<legend>Gravar arquivo no Google-Drive</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nome do Arquivo</label>  
+  <div class="col-md-4">
+  <input ng-model="file.name"type="text" placeholder="Nome" class="form-control input-md" required="">
+  <span class="help-block">Nome do arquivo no Google-Drive</span>  
+  </div>
+</div>
+
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="">Arquivo para Upload</label>
+  <div class="col-md-4">
+    <input ngf-select ng-model="files"   type="file">
+    
+  </div>
+   
+</div>
+    <div class="form-group">
+        <div class="col-md-4 control-label">
+            <button type="submit" ng-click="uploader(file)" class="btn btn-warning">Fazer Upload</button>
+        </div>
+    </div>
+
+</fieldset>
+</form>
+{{respostaFile}}

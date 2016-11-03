@@ -1,0 +1,46 @@
+<html ng-app="googledrive">
+<head>
+	<title>Google server-side OAuth v2 Example</title>
+    <script src="vendor/angular/angular.js"></script>
+   <script src="vendor/angular-route/angular-route.js"></script>
+   <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/ng-file-upload/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+    <script src="vendor/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="js/main.js"></script>
+
+  
+      <script src="js/controllers/googledriveController.js"></script>
+    <script src="js/controllers/folderController.js"></script>
+    <link rel="stylesheet"href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
+
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+
+	<script type="text/javascript">
+
+		var url = '';
+		var b = '';
+		$(document).ready(function() { 
+
+			$.get('/login', function(data) {
+				url = data;
+			});
+
+			var interval = window.setInterval((function() {
+				if (b.closed) { 
+			 		window.clearInterval(interval);
+
+			 		window.location = './list';
+			 	}
+			}),1000);
+		});
+
+	</script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body class="class">
+    <div ng-view></div>
+
+</body>
+</html>
